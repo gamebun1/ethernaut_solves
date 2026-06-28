@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./Telephone.sol";
+interface Telephone {
+   function changeOwner(address _owner) external;
+}
 
 contract Attacker {
     function claimOwnerShip(address _targetAddress) public {
